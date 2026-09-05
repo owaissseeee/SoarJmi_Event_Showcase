@@ -1,0 +1,216 @@
+:root {
+    --bg-main: #040a06;
+    --bg-top: #030805;
+    --card-bg: #09130c;
+    --card-bg-hvr: #0d1c12;
+    --border-clr: #152d1c;
+    --border-hvr: #22c55e;
+    --accent: #22c55e;
+    --glow: rgba(34, 197, 94, 0.25);
+    --txt-primary: #ffffff;
+    --txt-sub: #9ca3af;
+    --txt-muted: #6b7280;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg-main);
+    color: var(--txt-primary);
+    line-height: 1.6;
+}
+
+.clr-acc {
+    color: var(--accent);
+}
+
+.topnav {
+    background: var(--bg-top);
+    border-bottom: 1px solid var(--border-clr);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--txt-primary);
+}
+
+.brand-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.hero-sec {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(34, 197, 94, 0.08);
+    border: 1px solid var(--border-clr);
+    color: var(--accent);
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent);
+}
+
+.hero-sec h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.5px;
+}
+
+.hero-sec p {
+    color: var(--txt-sub);
+    font-size: 1.1rem;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+}
+
+.ev-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.ev-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-clr);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .ev-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--border-hvr);
+        box-shadow: 0 10px 25px var(--glow);
+        background: var(--card-bg-hvr);
+    }
+
+.img-box {
+    position: relative;
+    height: 190px;
+}
+
+    .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.85);
+        transition: filter 0.3s ease;
+    }
+
+.ev-card:hover .img-box img {
+    filter: brightness(1);
+}
+
+.card-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.ev-date {
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.card-ttl {
+    font-size: 1.3rem;
+    color: var(--txt-primary);
+    margin-bottom: 0.6rem;
+}
+
+.card-txt {
+    font-size: 0.95rem;
+    color: var(--txt-sub);
+    margin-bottom: 1.75rem;
+    flex-grow: 1;
+}
+
+.btn-act {
+    display: block;
+    text-align: center;
+    padding: 0.7rem 1.2rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    background: var(--accent);
+    color: #000;
+    transition: all 0.2s ease;
+}
+
+    .btn-act:hover {
+        background: #16a34a;
+        box-shadow: 0 0 15px var(--glow);
+    }
+
+.ftr {
+    text-align: center;
+    padding: 3rem 1rem;
+    border-top: 1px solid var(--border-clr);
+    background: var(--bg-top);
+    color: var(--txt-muted);
+    font-size: 0.9rem;
+}
+
+.ftr-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--txt-primary);
+    margin-bottom: 0.5rem;
+}
